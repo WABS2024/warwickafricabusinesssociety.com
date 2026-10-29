@@ -8,7 +8,7 @@ const reports = fs.readdirSync('./assets/reports'); //Read the contents of ./ass
 const list = reports.map(f => { //map returns a new array (list of file metadata objects) based on the files found in the directory with readdirSync.
     const s = fs.statSync('./assets/reports/'+f); //statSync gets metadata of each file in reports such as size, etc...
     return { //Return an object with following fields
-        'title': f.replace('.pdf', '').replace(/[-_]/g, ' '), //Format how file titles will be displayed
+        'title': f.replace('.pdf', ''), //Format how file titles will be displayed
         'file': './assets/reports/'+f, //Field that displays where report is located
         'size': s.size //File size
     };

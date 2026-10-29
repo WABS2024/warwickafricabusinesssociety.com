@@ -1,146 +1,86 @@
 [
   {
-    "title": "ENERGY HORIZONTAL",
-    "file": "./assets/reports/ENERGY HORIZONTAL.pdf",
-    "size": 4717801,
+    "title": "Energy Sector Report",
+    "issue": "1",
+    "date": "December 2024",
+    "file": "./assets/reports/Energy Sector Report - Issue 1 - December 2024.pdf",
     "category": "Energy"
   },
   {
-    "title": "Energy Report MAY",
-    "file": "./assets/reports/Energy Report MAY.pdf",
-    "size": 6114808,
+    "title": "Energy Sector Report",
+    "issue": "2",
+    "date": "January 2025",
+    "file": "./assets/reports/Energy Sector Report - Issue 2 - January 2025.pdf",
     "category": "Energy"
   },
   {
-    "title": "Energy Report",
-    "file": "./assets/reports/Energy Report.pdf",
-    "size": 6399353,
+    "title": "Energy Sector Report",
+    "issue": "3",
+    "date": "May 2025",
+    "file": "./assets/reports/Energy Sector Report - Issue 3 - May 2025.pdf",
     "category": "Energy"
   },
   {
-    "title": "Energy Sector Report, December 2024, Issue 1",
-    "file": "./assets/reports/Energy Sector Report, December 2024, Issue 1.pdf",
-    "size": 4385164,
-    "category": "Energy"
-  },
-  {
-    "title": "Energy Sector Report, February 2025, Issue 2",
-    "file": "./assets/reports/Energy Sector Report, February 2025, Issue 2.pdf",
-    "size": 4378236,
-    "category": "Energy"
-  },
-  {
-    "title": "Energy Sector Report, January 2025, Issue 12",
-    "file": "./assets/reports/Energy Sector Report, January 2025, Issue 12.pdf",
-    "size": 6399439,
-    "category": "Energy"
-  },
-  {
-    "title": "Energy Sector Report, January 2025, Issue 2",
-    "file": "./assets/reports/Energy Sector Report, January 2025, Issue 2.pdf",
-    "size": 4378845,
-    "category": "Energy"
-  },
-  {
-    "title": "Finance Horizontal",
-    "file": "./assets/reports/Finance Horizontal.pdf",
-    "size": 5252160,
+    "title": "Finance Sector Report",
+    "issue": "1",
+    "date": "December 2024",
+    "file": "./assets/reports/Finance Sector Report - Issue 1 - December 2024.pdf",
     "category": "Finance"
   },
   {
-    "title": "Finance Report 13",
-    "file": "./assets/reports/Finance Report 13.pdf",
-    "size": 4606019,
+    "title": "Finance Sector Report",
+    "issue": "2",
+    "date": "January 2025",
+    "file": "./assets/reports/Finance Sector Report - Issue 2 - January 2025.pdf",
     "category": "Finance"
   },
   {
-    "title": "Finance Report 1803",
-    "file": "./assets/reports/Finance Report 1803.pdf",
-    "size": 3997219,
+    "title": "Finance Sector Report",
+    "issue": "3",
+    "date": "February 2025",
+    "file": "./assets/reports/Finance Sector Report - Issue 3 - February 2025.pdf",
     "category": "Finance"
   },
   {
-    "title": "Finance Sector Report, December 2024, Issue 1",
-    "file": "./assets/reports/Finance Sector Report, December 2024, Issue 1.pdf",
-    "size": 4472457,
-    "category": "Finance"
-  },
-  {
-    "title": "Finance Sector Report, February 2025, Issue 2",
-    "file": "./assets/reports/Finance Sector Report, February 2025, Issue 2.pdf",
-    "size": 5053558,
-    "category": "Finance"
-  },
-  {
-    "title": "Finance Sector Report, January 2025, Issue 12",
-    "file": "./assets/reports/Finance Sector Report, January 2025, Issue 12.pdf",
-    "size": 4680753,
-    "category": "Finance"
-  },
-  {
-    "title": "Real Estate & Property Development Sector Report, December 2024, Issue 1",
-    "file": "./assets/reports/Real Estate & Property Development Sector Report, December 2024, Issue 1.pdf",
-    "size": 8713426,
+    "title": "Real Estate Sector Report",
+    "issue": "1",
+    "date": "January 2025",
+    "file": "./assets/reports/Real Estate Sector Report - Issue 1 - January 2025.pdf",
     "category": "Real Estate"
   },
   {
-    "title": "Real Estate & Property Development Sector Report, January 2025, Issue 12",
-    "file": "./assets/reports/Real Estate & Property Development Sector Report, January 2025, Issue 12.pdf",
-    "size": 9867549,
+    "title": "Real Estate Sector Report",
+    "issue": "2",
+    "date": "February 2025",
+    "file": "./assets/reports/Real Estate Sector Report - Issue 2 - February 2025.pdf",
     "category": "Real Estate"
   },
   {
-    "title": "Real Estate May",
-    "file": "./assets/reports/Real Estate May.pdf",
-    "size": 8693236,
+    "title": "Real Estate Sector Report",
+    "issue": "3",
+    "date": "March 2025",
+    "file": "./assets/reports/Real Estate Sector Report - Issue 3 - March 2025.pdf",
     "category": "Real Estate"
   },
   {
-    "title": "Real Estate Report, February 2025, Issue 2",
-    "file": "./assets/reports/Real Estate Report, February 2025, Issue 2.pdf",
-    "size": 7318253,
-    "category": "Real Estate"
+    "title": "Technology Sector Report",
+    "issue": "1",
+    "date": "December 2024",
+    "file": "./assets/reports/Technology Sector Report - Issue 1 - December 2024.pdf",
+    "category": "Technology"
   },
   {
-    "title": "Real Estate",
-    "file": "./assets/reports/Real Estate.pdf",
-    "size": 7320424,
-    "category": "Real Estate"
+    "title": "Technology Sector Report",
+    "issue": "2",
+    "date": "January 2025",
+    "file": "./assets/reports/Technology Sector Report - Issue 2 - January 2025.pdf",
+    "category": "Technology"
   },
   {
-    "title": "Tech Report 1803",
-    "file": "./assets/reports/Tech Report 1803.pdf",
-    "size": 6589427,
-    "category": "Tech"
-  },
-  {
-    "title": "Tech Report MAY (1)",
-    "file": "./assets/reports/Tech Report MAY (1).pdf",
-    "size": 6795889,
-    "category": "Tech"
-  },
-  {
-    "title": "Tech",
-    "file": "./assets/reports/Tech.pdf",
-    "size": 5102506,
-    "category": "Tech"
-  },
-  {
-    "title": "Technology Sector Report, December 2024, Issue 1",
-    "file": "./assets/reports/Technology Sector Report, December 2024, Issue 1.pdf",
-    "size": 4411879,
-    "category": "Tech"
-  },
-  {
-    "title": "Technology Sector Report, February 2025, Issue 2",
-    "file": "./assets/reports/Technology Sector Report, February 2025, Issue 2.pdf",
-    "size": 5135754,
-    "category": "Tech"
-  },
-  {
-    "title": "Technology Sector Report, January 2025, Issue 12",
-    "file": "./assets/reports/Technology Sector Report, January 2025, Issue 12.pdf",
-    "size": 6587930,
-    "category": "Tech"
+    "title": "Technology Sector Report",
+    "issue": "3",
+    "date": "February 2025",
+    "file": "./assets/reports/Technology Sector Report - Issue 3 - February 2025.pdf",
+    "category": "Technology"
   }
 ]

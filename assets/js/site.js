@@ -24,18 +24,18 @@
         });
     }
 
-    document.querySelectorAll('[data-team], [data-report]').forEach(button => {
+/*     Made a change here
+    Moved report filtering to another File
+    But this still works for all elements with 'data-team' attribute */
+    document.querySelectorAll('[data-team]').forEach(button => {
         button.addEventListener('click', () => {
-            const key = button.dataset.team || button.dataset.report;
-            const gallerySelector = button.dataset.team ? '.team-gallery' : '.report-gallery';
-            document.querySelectorAll(gallerySelector).forEach(gallery => {
+            const key = button.dataset.team;
+            document.querySelectorAll('.team-gallery').forEach(gallery => {
                 gallery.classList.toggle('active', gallery.id === key);
             });
-            if (button.dataset.report) {
-                document.querySelectorAll('[data-report]').forEach(tab => tab.setAttribute('aria-selected', String(tab === button)));
-            }
         });
     });
+
 
     const progressBar = document.createElement('div');
     progressBar.className = 'scroll-progress';

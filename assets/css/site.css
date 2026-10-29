@@ -676,7 +676,7 @@ footer img {
 .report-cover { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: var(--wabs-navy); }
 .report-cover::after { position: absolute; inset: 0; background: linear-gradient(135deg, transparent 35%, rgba(232,179,75,.38)); content: ""; transition: opacity 180ms ease; }
 .report-cover img { width: 190%; max-width: none; height: 190%; object-fit: cover; object-position: left top; opacity: .84; transform-origin: left top; transition: transform 500ms cubic-bezier(.2,.8,.2,1), opacity 180ms ease; }
-#Finance .report-cover img, #real-estate-property-development .report-cover img { margin-left: -90%; object-position: left top; transform-origin: right top; }
+.report-card[data-category="Finance"] .report-cover img, .report-card[data-category="Real Estate"] .report-cover img { margin-left: -90%; object-position: left top; transform-origin: right top; }
 .report-cover span { position: absolute; right: 16px; bottom: 16px; z-index: 1; padding: 9px 11px; background: var(--wabs-white); color: var(--wabs-navy); font-size: .72rem; font-weight: 700; opacity: 0; transform: translateY(8px); transition: opacity 180ms ease, transform 180ms ease; }
 .report-card:hover .report-cover img { opacity: 1; transform: scale(1.06); }
 .report-card:hover .report-cover span { opacity: 1; transform: translateY(0); }

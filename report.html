@@ -167,15 +167,17 @@
         }
 
         .report-gallery {
-            display: none;
+            display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 15px;
             justify-items: center;
         }
 
-        .report-gallery.active {
-            display: grid;
+        .report-cover img {
+            object-fit: cover;
+            object-position: left center;  /* or right center, depending on which side has the important content */
         }
+
 
         footer {
             background-color: #152B52;
@@ -228,10 +230,10 @@
                 <button type="button" role="tab" aria-selected="true" data-report="Energy">Energy</button>
                 <button type="button" role="tab" aria-selected="false" data-report="Finance">Finance</button>
                 <button type="button" role="tab" aria-selected="false" data-report="Technology">Technology</button>
-                <button type="button" role="tab" aria-selected="false" data-report="real-estate-property-development">Real Estate &amp; Property Development</button>
+                <button type="button" role="tab" aria-selected="false" data-report="Real Estate">Real Estate &amp; Property Development</button>
             </div>
 
-            <div class="report-gallery active" id="Energy" role="tabpanel">
+            <!-- <div class="report-gallery active" id="Energy" role="tabpanel">
                 <article class="report-card"><a class="report-cover preview-report" href="assets/reports/ENERGY HORIZONTAL.pdf" data-title="Energy Sector Report / December 2024"><img src="assets/images/energy_sec.png" alt="Energy sector report cover"><span>Open report</span></a><div class="report-card-body"><p class="report-meta">ENERGY / ISSUE 01</p><h2>Energy Sector Report</h2><p>December 2024</p><a class="download-report" href="assets/reports/ENERGY HORIZONTAL.pdf" download="Energy Sector Report, December 2024, Issue 1.pdf">Download PDF <span aria-hidden="true">&darr;</span></a></div></article>
                 <article class="report-card"><a class="report-cover preview-report" href="assets/reports/Energy Sector Report, January 2025, Issue 12.pdf" data-title="Energy Sector Report / January 2025"><img src="assets/images/energy_sec.png" alt="Energy sector report cover"><span>Open report</span></a><div class="report-card-body"><p class="report-meta">ENERGY / ISSUE 02</p><h2>Energy Sector Report</h2><p>January 2025</p><a class="download-report" href="assets/reports/Energy Sector Report, January 2025, Issue 12.pdf" download="Energy Sector Report, January 2025, Issue 2.pdf">Download PDF <span aria-hidden="true">&darr;</span></a></div></article>
                 <article class="report-card"><a class="report-cover preview-report" href="assets/reports/Energy Report MAY.pdf" data-title="Energy Sector Report / February 2025"><img src="assets/images/energy_sec.png" alt="Energy sector report cover"><span>Open report</span></a><div class="report-card-body"><p class="report-meta">ENERGY / ISSUE 03</p><h2>Energy Sector Report</h2><p>February 2025</p><a class="download-report" href="assets/reports/Energy Report MAY.pdf" download="Energy Sector Report, February 2025, Issue 3.pdf">Download PDF <span aria-hidden="true">&darr;</span></a></div></article>
@@ -253,6 +255,11 @@
                 <article class="report-card"><a class="report-cover preview-report" href="assets/reports/Real Estate.pdf" data-title="Real Estate &amp; Property Development / December 2024"><img src="assets/images/resec.png" alt="Real estate report cover"><span>Open report</span></a><div class="report-card-body"><p class="report-meta">REAL ESTATE / ISSUE 01</p><h2>Real Estate &amp; Property Development</h2><p>December 2024</p><a class="download-report" href="assets/reports/Real Estate.pdf" download="Real Estate Sector Report, December 2024, Issue 1.pdf">Download PDF <span aria-hidden="true">&darr;</span></a></div></article>
                 <article class="report-card"><a class="report-cover preview-report" href="assets/reports/Real Estate &amp; Property Development Sector Report, January 2025, Issue 12.pdf" data-title="Real Estate &amp; Property Development / January 2025"><img src="assets/images/resec.png" alt="Real estate report cover"><span>Open report</span></a><div class="report-card-body"><p class="report-meta">REAL ESTATE / ISSUE 02</p><h2>Real Estate &amp; Property Development</h2><p>January 2025</p><a class="download-report" href="assets/reports/Real Estate &amp; Property Development Sector Report, January 2025, Issue 12.pdf" download="Real Estate Sector Report, January 2025, Issue 2.pdf">Download PDF <span aria-hidden="true">&darr;</span></a></div></article>
                 <article class="report-card"><a class="report-cover preview-report" href="assets/reports/Real Estate May.pdf" data-title="Real Estate &amp; Property Development / February 2025"><img src="assets/images/resec.png" alt="Real estate report cover"><span>Open report</span></a><div class="report-card-body"><p class="report-meta">REAL ESTATE / ISSUE 03</p><h2>Real Estate &amp; Property Development</h2><p>February 2025</p><a class="download-report" href="assets/reports/Real Estate May.pdf" download="Real Estate Sector Report, February 2025, Issue 3.pdf">Download PDF <span aria-hidden="true">&darr;</span></a></div></article>
+            </div> -->
+
+            <div class="report-gallery">
+                <!-- The reports of currently selected button based on 'aria-selected' in .report-tabs will be displayed here -->
+                
             </div>
         </section>
 
@@ -272,5 +279,6 @@
     </footer>
 
     <script src="assets/js/site.js"></script>
+    <script src="assets/js/report-filter.js"></script>
 </body>
 </html>
