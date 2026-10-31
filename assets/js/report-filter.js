@@ -11,14 +11,14 @@ const images = {
 
 const loadReports = async () => {
     try{
-        if (reportsCache) return reportsCache;
+        if (reportsCache) return reportsCache; //Prevent constantly doing a fetch
 
         const response = await fetch("./assets/reports.json");
 
         if (!response.ok){
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        reportsCache = await response.json();
+        reportsCache = await response.json(); //Store reports in reportsCache variable
         return reportsCache;
         // console.log("Successfully loaded reports:", reports);
     } catch(error){
