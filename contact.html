@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="icon" href="assets/images/wabs.jpeg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <style>
         * {
@@ -17,90 +18,36 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            font-family: Arial, sans-serif;
         }
 
-        header {
-            background-color: #152B52;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-
-        header img {
-            height: 70px;
-        }
-
-        /* Hamburger Menu Styles */
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            z-index: 1001;
-        }
-
-        .hamburger span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background: #fff;
-            margin: 5px 0;
-            transition: 0.3s;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 5px;
-        }
-
-        nav ul li a:hover {
-            background-color: #29648A;
-            color: #ffffff;
-        }
-
-        .hero-container {
-            position: relative;
-            width: 100%;
-            margin-top: 70px;
-        }
 
         .contact-hero {
+            position: relative;
+            height: 100%;
+            min-height: 420px;
+            align-items: center;
+            padding: 7rem 9rem;
+            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.9)),  url("assets/images/african-businesses.jpg") top/cover;
+            color: var(--wabs-white);
+        }
+
+        .contact-hero-content {
+            position: absolute;
+            top: 50%;
             width: 100%;
-            height: 40vh;
-            object-fit: cover;
+            z-index: 1;
+            width: min(100%, 720px);
+            border: 1px solid white;
+            animation: hero-in 800ms cubic-bezier(.2,.8,.2,1) both;
         }
 
         .hero-text {
+            color: #fff;
+            text-align: left;
             position: absolute;
             top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #152B52;
-            font-size: 2.5rem;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+            left: 8%;
+            /* transform: translate(-50%, -50%); */
         }
 
         .content-section {
@@ -111,9 +58,26 @@
             margin: 0 auto;
         }
 
+
         .left-content {
             flex: 1;
             padding: 20px;
+        }
+
+        .left-content h2, .left-content p{
+            color: #fff;
+        }
+
+        .left-content p{
+            margin-top: 10px;
+        }
+
+        .contact-info{
+            margin-top: 35px;
+        }
+
+        .contact-info p {
+            color: rgba(252, 250, 250, 0.7);
         }
 
         .right-content {
@@ -122,111 +86,62 @@
         }
 
         form {
+            background: #1a1a1a; 
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
             max-width: 100%;
-            background: #f9f9f9;
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.05);
         }
 
         label {
             font-weight: bold;
             display: block;
-            margin-bottom: 5px;
+            margin-top: 15px;
+            color: #fff;
+            font-weight: 300;
         }
 
         input, textarea {
             width: 100%;
             padding: 10px;
-            margin-bottom: 15px;
+            margin-top: 5px;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 12px;
             font-size: 16px;
+            font-family: inherit;
         }
 
-        button {
-            background-color: #152B52;
+        form p{
+            margin-top: 10px;
+            font-weight: 200;
+        }
+
+        form button {
+            background-color: transparent;
             color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
+            border: 1px solid #fff;
+            border-radius: 30px;
+            padding: 12px 24px;
+            font-family: inherit;
+            font-weight: 200;
+            font-size: 16px;
             cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
         }
 
-        button:hover {
-            background-color: #29648A;
-        }
-
-        footer {
-            background-color: #152B52;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        footer img {
-            height: 35px;
-            padding: 0 10px;
-            transition: transform 0.3s;
-        }
-
-        footer img:hover {
-            transform: scale(1.1);
+        form button:hover {
+            background-color: #e5c35b;
+            color: #000;
+            border: none;
+            font-weight: 300;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
         }
 
         @media (max-width: 768px) {
-            header {
-                height: 60px;
-                padding: 0 10px;
-            }
-
-            header img {
-                height: 40px;
-            }
-
-            .hamburger {
-                display: block;
-                margin-left: auto;
-            }
-
-            nav ul {
-                position: fixed;
-                top: 60px;
-                right: -100%;
-                flex-direction: column;
-                background: #152B52;
-                width: 100%;
-                height: calc(100vh - 60px);
-                transition: 0.3s;
-                padding: 20px 0;
-            }
-
-            nav ul.show-menu {
-                right: 0;
-            }
-
-            nav ul li {
-                margin: 10px 0;
-                text-align: center;
-            }
-
-            nav ul li a {
-                font-size: 1.1rem;
-                padding: 15px;
-                display: block;
-            }
-
-            .hamburger.active span:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-
-            .hamburger.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -6px);
-            }
 
             .content-section {
                 flex-direction: column;
@@ -260,41 +175,42 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="assets/images/wabs.jpeg" alt="WABS Logo"></a>
+        <a href="index.html" class="logo">
+            <img src="assets/images/wabs-removebg-preview.png" alt="WABS Logo">
+        </a>
+
         <button type="button" class="hamburger" aria-label="Toggle navigation">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <nav>
+
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="report.html">Reports</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="events_info.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="hero-container">
-            <img src="assets/images/Contact-hero.jpg" alt="Contact hero" class="contact-hero">
-            <h1 class="hero-text">Contact Us</h1>
-        </div>
+        <section class="contact-hero">
+            <h2 class="large-text hero-text">Contact Us</h2>
+        </section>
 
         <section class="content-section">
             <div class="left-content">
-                <h2>Get in Touch</h2>
-                <p>Reach out to us via email or phone</p>
+                <h2 class="medium-text">Get in Touch</h2>
+                <p class="small-text">Reach out to us via email</p>
                 <div class="contact-info">
-                    <p><strong></strong><br>
-                    Warwick African Business Society</p>
-                    <p><strong></strong><br>
-                    Warwick Business School,</p>
-                    <p>Scarman Rd,</p>
-                    <p>Coventry</p>
-                    <p>CV4 7AL</p>
+                    <p><strong class="small-text">Warwick African Business Society:</strong><br></p>
+                    <p><strong class="small-text">Warwick Business School,</strong><br></p>
+                    <p class="small-text">Scarman Rd,</p>
+                    <p class="small-text">Coventry,</p>
+                    <p class="small-text">CV4 7AL</p>
                 </div>
             </div>
 
@@ -309,8 +225,8 @@
                     <label for="message">Message *</label>
                     <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
 
-                    <p>* indicates required field</p>
-                    <button type="submit">Send</button>
+                    <p>* Indicates required field</p>
+                    <button type="submit">Send your enquiry</button>
                 </form>
             </div>
         </section>

@@ -2,19 +2,28 @@
     document.documentElement.classList.add('js-enabled');
 
     const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('nav ul');
+    const navMenu = document.querySelector('.main-nav');
+    const navLeft = document.querySelector('.nav-left');
+    const navRight = document.querySelector('.nav-right');
+
+
 
     if (hamburger && navMenu) {
         const closeMenu = () => {
             hamburger.classList.remove('active');
-            navMenu.classList.remove('show-menu');
+            navMenu.classList.remove('active');
+            // navLeft.classList.remove('active');
+            // navRight.classList.remove('active');
             hamburger.setAttribute('aria-expanded', 'false');
         };
 
         hamburger.setAttribute('aria-expanded', 'false');
         hamburger.addEventListener('click', () => {
+            console.log('Hi');
             const isOpen = hamburger.classList.toggle('active');
-            navMenu.classList.toggle('show-menu', isOpen);
+            navMenu.classList.toggle('active', isOpen);
+            // navLeft.classList.toggle("active", isOpen);
+            // navRight.classList.toggle("active", isOpen);
             hamburger.setAttribute('aria-expanded', String(isOpen));
         });
 
@@ -23,6 +32,40 @@
             if (!navMenu.contains(event.target) && !hamburger.contains(event.target)) closeMenu();
         });
     }
+
+    
+
+    const homeMenuBtns = document.querySelectorAll('.content-btn-container button');
+    const homeMenuContent = document.querySelectorAll('.content-wrapper .content');
+
+    homeMenuBtns.forEach(button => {
+        button.addEventListener('click', () => {
+            homeMenuBtns.forEach(btn => {btn.classList.remove('active')});
+            homeMenuContent.forEach(content => {content.classList.remove('active')});
+
+            button.classList.add('active');
+            const contentToShow = button.dataset.target;
+
+            document.getElementById(contentToShow).classList.add('active');
+        })
+    })
+
+
+    const teamRoleBtns = document.querySelectorAll('.team-role-btn');
+    teamRoleBtns.forEach(button => {
+        button.addEventListener('click', () => {
+            teamRoleBtns.forEach(btn => {btn.classList.remove('active')});
+            button.classList.add('active');
+        });
+    });
+
+    const reportTabBtns = document.querySelectorAll('.report-tab');
+    reportTabBtns.forEach(button => {
+        button.addEventListener('click', () => {
+            reportTabBtns.forEach(btn => {btn.classList.remove('active')});
+            button.classList.add('active');
+        });
+    });
 
     document.querySelectorAll('[data-team], [data-report]').forEach(button => {
         button.addEventListener('click', () => {

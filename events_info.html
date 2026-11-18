@@ -4,51 +4,227 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events | WABS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/images/wabs.jpeg" type="image/jpeg">
     <link rel="stylesheet" href="assets/css/site.css">
+
+    <style>
+
+        .events-section-heading{
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(72, 71, 71, 0.6);
+        }
+
+        .event-options-wrapper{
+            margin-top: 25px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(72, 71, 71, 0.6);
+        }
+
+        .event-options-label {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #ffffff;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+
+        .event-options{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .event-btn {
+            background: transparent;
+            opacity: 1;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 8px 20px;
+            color: #a0a0a0;
+            cursor: pointer;
+            min-width: 54px;
+            text-align: center;
+            font: inherit;
+            font-size: 0.9rem;
+
+            transition: all 0.3s ease;
+        }
+
+        .event-btn:hover{
+            border-color: #ffffff;
+            color: #ffffff;
+        }
+
+        .event-btn.active{
+            background-color: #ffffff;
+            color: #1a1a1a;
+            border-color: #ffffff;
+            font-weight: 500;
+        }
+
+        .event-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+            padding: 12px 0;
+        }
+
+        .event-card {
+            overflow: hidden; 
+            background: #1a1a1a; 
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            text-align: left; 
+            transition: box-shadow 180ms ease, transform 180ms ease; 
+            height: 100%;
+        }
+
+        .img-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+        }
+
+        .event-card img{
+            width: 100%;
+            height: 100%;
+            /* max-width: none; */
+            object-fit: cover;
+            object-position: top center;
+            opacity: 0.9; 
+            transition: all ease;
+        }
+
+        .event-card-body { 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 5px 24px 12px 24px;
+            border-top: 1px solid var(--wabs-gold); 
+        }
+
+        .event-card-body h2 { 
+            margin-bottom: 4px; 
+            color: #ffffff;
+            font-size: 1.45rem;
+            font-weight: 300; 
+        }
+
+        .event-card-body p{ 
+            color: rgba(221, 219, 238, 0.85); 
+            font-size: 1rem; 
+        }
+
+        .event-meta {
+            font-size: 0.8rem;
+            color: #a0a0a0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 8px;
+        }
+
+        .event-desc {
+            font-weight: 200;
+        }
+
+        .event-card a {
+            margin-top: auto;
+            color: #ffffff;
+            padding-top: 20px;
+            padding-bottom: 4px;
+            color: var(--wabs-gold);
+            font-size: 0.95rem;
+            font-weight: 300;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        /* .event-card a:hover {
+            color: #ffffff;
+        } */
+
+        .event-card a::after{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--wabs-gold);;
+            transition: width 0.2s ease;
+        }
+
+        .event-card a:hover::after{
+            width: 100%;
+        }
+
+    </style>
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="assets/images/wabs.jpeg" alt="WABS Logo"></a>
-        <button type="button" class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-        <nav aria-label="Primary navigation"><ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="report.html">Reports</a></li>
-            <li><a href="events.html" aria-current="page">Events</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul></nav>
+        <a href="index.html" class="logo">
+            <img src="assets/images/wabs-removebg-preview.png" alt="WABS Logo">
+        </a>
+
+        <button type="button" class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="report.html">Reports</a></li>
+                <li><a href="events_info.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main class="events-page">
         <section class="events-hero">
             <div class="events-hero-content">
-                <p class="eyebrow">Warwick African Business Society</p>
-                <h1>Ideas that move Africa forward</h1>
-                <p>Connect with ambitious students, founders and industry leaders through conversations and practical sessions focused on Africa's business landscape.</p>
+                <h2 class="large-text">Connect with Africa's Future</h2>
+                <h3 class="medium-text">Past Highlights & What's Next</h3>
+                <p class="small-text-wrap">At WABS, we connect with ambitious students, founders and industry leaders through conversations and practical sessions focused on Africa's business landscape.</p>
                 <div class="hero-actions">
-                    <a class="hero-action" href="#programming">Explore the programme <span aria-hidden="true">&darr;</span></a>
-                    <span class="hero-status"><i></i> 2024 / 25 season now live</span>
+                    <a class="hero-action" href="#programming">Explore our events <span aria-hidden="true">&darr;</span></a>
+                    <!-- <span class="hero-status"><i></i> 2024 / 25 season now live</span> -->
                 </div>
             </div>
         </section>
         <section class="events-content" id="programming">
             <div class="events-section-heading">
-                <p class="eyebrow">What to expect</p>
-                <h2>Make your next connection count</h2>
-                <p>Our events bring together people who are curious about Africa's future and ready to contribute to it.</p>
+                <h2 class="medium-text">Make your next connection count</h2>
+                <p class="small-text-wrap">We connect forward-thinking individuals who are dedicated to understanding and advancing Africa's future.</p>
             </div>
-            <div class="event-toolbar" aria-label="Filter event formats">
-                <span>Browse formats</span>
-                <div class="event-filters" role="group">
-                    <button class="event-filter is-active" type="button" data-filter="all">All formats</button>
-                    <button class="event-filter" type="button" data-filter="connect">Connect</button>
-                    <button class="event-filter" type="button" data-filter="learn">Learn</button>
+
+            <div class="event-options-wrapper">
+                <h4 class="event-options-label">Timeline</h4>
+                <div class="event-options">
+                    <button class="event-btn event-timeline active" type="button" data-filter="all">All</button>
+                    <button class="event-btn event-timeline" type="button" data-filter="upcoming">Upcoming</button>
+                    <button class="event-btn event-timeline" type="button" data-filter="past">Past</button>
+                </div>
+                <h4 class="event-options-label">Format</h4>
+                <div class="event-options">
+                    <button class="event-btn event-type active" type="button" data-filter="all">All</button>
+                    <button class="event-btn event-type" type="button" data-filter="connect">Connect</button>
+                    <button class="event-btn event-type" type="button" data-filter="learn">Learn</button>
                 </div>
             </div>
+
             <div class="event-list">
-                <article class="event-card" data-category="learn"><span class="event-number">01 / LEARN</span><h2>Speaker Sessions</h2><p>Hear directly from leaders building businesses and shaping opportunity across Africa.</p><a href="contact.html">Connect with us</a></article>
-                <article class="event-card" data-category="connect"><span class="event-number">02 / CONNECT</span><h2>Networking</h2><p>Meet students, alumni and professionals who share your curiosity and ambition.</p><a href="contact.html">Connect with us</a></article>
-                <article class="event-card" data-category="learn"><span class="event-number">03 / LEARN</span><h2>Insight Workshops</h2><p>Build practical understanding through focused discussions, research and sector-led learning.</p><a href="report.html">Read our reports</a></article>
             </div>
         </section>
     </main>
@@ -61,5 +237,6 @@
         <p>&copy; 2024 by WABS Group</p>
     </footer>
     <script src="assets/js/site.js"></script>
+    <script src="assets/js/events.js"></script>
 </body>
 </html>

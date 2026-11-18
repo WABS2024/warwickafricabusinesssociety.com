@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/images/wabs.jpeg" type="image/jpeg">
     <style>
         /* Base styles */
@@ -11,7 +12,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            font-family: Arial, sans-serif;
+            /* font-family: Arial, sans-serif; */
             padding: 20px;
             margin: 0;
         }
@@ -37,7 +38,7 @@
         }
 
         /* Font settings */
-        @font-face {
+        /* @font-face {
             font-family: 'montserrat';
             src: url('assets/fonts/Montserrat-Bold.ttf') format('truetype');
             font-weight: normal;
@@ -47,54 +48,10 @@
         .montserrat-bold {
             font-family: "Montserrat", serif;
             font-weight: 700;
-        }
-
-        /* Header */
-        header {
-            background-color: #152B52;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-
-        header img {
-            height: 70px;
-        }
-
-        /* Navigation */
-        nav ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 5px;
-        }
-
-        nav ul li a:hover {
-            background-color: #29648A;
-        }
+        } */
 
         /* Hero Sections */
-        .hero-section, .hero-section2 {
+        /* .hero-section, .hero-section2 {
             height: 70vh;
             display: flex;
             align-items: center;
@@ -103,31 +60,61 @@
             color: #ffffff;
             margin-top: 70px;
             padding: 50px 20px;
-        }
+        } */
 
         .hero-section {
-            background: url("assets/images/info.png");
+            background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url("assets/images/lagos.png");
             background-size: cover;
+            height: 100%;
+            color: #ffffff;
+            padding: 5rem;
+            /* font-family: 'TheSeasons', Arial, sans-serif; */
+            position: relative;
+            /* text-align: center; */
+            height: 442px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
+
+        @media(max-width: 723px){
+            .hero-section{
+                padding: 4rem;
+            }
+        }
+
+        @media(max-width: 687px){
+            .hero-section{
+                height: 350px;
+            }
+        }
+
+        @media(max-width: 650px){
+            .hero-section{
+                height: 200px;
+            }
+        }
+
+        @media(max-width: 360px){
+            .hero-section{
+                padding: 2rem;
+            }
+        }
+
 
         .hero-section2 {
             background-color: #1A3757;
             flex-direction: column;
         }
 
-        .hero-section h1, .hero-section2 h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .hero-section h1 {
+        /* .hero-section h1 {
             color: #002147;
-        }
+        } */
 
-        .hero-section p, .hero-section2 p {
+        .hero-section2 p {
             font-size: 18px;
             max-width: 600px;
-            font-family: 'montserrat', Arial, sans-serif;
+            /* font-family: 'montserrat', Arial, sans-serif; */
         }
 
         /* Features */
@@ -152,15 +139,37 @@
             margin: 10px;
         }
 
+        .sector-wrapper{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        @media(max-width: 753px){
+            .sector-wrapper{
+                padding: 12px;
+            }
+        }
+        @media(max-width: 560px){
+            .sector-wrapper{
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Sector Layout */
         .sector-container {
-            display: flex;
+            /* display: flex;
             flex-direction: row;
-            align-items: stretch;
-            background-color: #002147;
+            align-items: stretch; */
+            background-color: #222121;
             color: white;
+            /* background: #d0cdcd;
+            color: #100f0f; */
+            /* opacity: 0.2; */
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 60px;
             margin-bottom: 20px;
         }
 
@@ -178,176 +187,254 @@
             object-fit: cover;
         }
 
+
         .sector-content {
             flex: 1;
             padding: 40px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: start;
         }
 
-        .sector-content h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            font-weight: bold;
+        .sector-title {
+            display: flex;
+            gap: 12px;
+            align-items: center;
         }
+
+        .finance-icon {
+            background-color: #d4af37;
+            border-radius: 100px;
+            height: 20px;
+            width: 20px;
+            opacity: 1;
+        }
+
+        .energy-icon {
+            background-color: #059669;
+            border-radius: 100px;
+            height: 20px;
+            width: 20px;
+            opacity: 1;
+        }
+
+        .tech-icon {
+            background-color: #2563eb;
+            border-radius: 100px;
+            height: 20px;
+            width: 20px;
+            opacity: 1; 
+        }
+
+        .real-estate-icon {
+            background-color: #7e22ce;
+            border-radius: 100px;
+            height: 20px;
+            width: 20px;
+            opacity: 1;             
+        }
+
 
         .sector-content p {
             font-size: 1rem;
             line-height: 1.8;
         }
 
+        @media(max-width: 456px){
+            .icon{
+                width: 15px;
+                height: 15px;
+            }
+
+            .sector-content h2 {
+                font-size: 1.2rem;
+            }
+
+            .sector-content p {
+                font-size: 0.9rem;
+            }
+        }
+        @media(max-width: 350px){
+            .icon{
+                width: 10px;
+                height: 10px;
+            }
+
+            .sector-content h2 {
+                font-size: 1rem;
+            }
+
+            .sector-content p {
+                font-size: 0.8rem;
+            }
+        }
+
         /* Team Section */
         .team-section {
             text-align: center;
-            padding: 50px 20px;
-            background-color: #f9f9f9;
+            color: var(--wabs-paper);
+            /* padding: 50px 20px; */
         }
 
-        .team-section h2 {
+        /* .team-section h2 {
             font-size: 2.5rem;
             margin-bottom: 30px;
             color: #152B52;
-        }
+        } */
+
 
         .buttons {
-            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin: 28px 0 !important;
+            padding: 0 16px;
         }
 
         .buttons button {
-            background-color: #002147;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            margin: 5px;
-            cursor: pointer;
-            border-radius: 5px;
+            margin: 0 !important;
+            padding: 11px 16px !important;
+            font-size: 0.9rem;
         }
 
-        .buttons button:hover {
-            background-color: #003470;
+        .team-role-btn {
+            background: #d0cdcd;
+            opacity: 1;
+            /* border: 1px solid #e0e0e0; */
+            border: none;
+            border-radius: 50px;
+            padding: 12px 24px;
+            color: #100f0f;
+            cursor: pointer;
+            min-width: 54px;
+            text-align: center;
+            font: inherit;
+
+            transition: all 0.3s ease;
+        }
+
+        .team-role-btn:hover {
+            background: #0c111d;
+            color: #f5f5f5;
+        }
+
+        .team-role-btn.active {
+            background: var(--wabs-blue-dark);
+            color: #f5f5f5;            
         }
 
         /* Team Gallery */
         .team-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            justify-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            gap: 24px;
+            padding: 20px 0;
             margin-top: 20px;
-            padding: 20px;
             display: none;
+            width: 100%;
         }
 
         .team-gallery.active {
-            display: grid;
+            display: flex;
         }
 
-        /* Team Members and Founders */
-        .founder, .team-member {
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 260px;
+            padding: 24px 20px 28px 20px; 
+            gap: 16px;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #1a1a1a; 
+            
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.08),
+                0 1px 2px rgba(255, 255, 255, 0.04);
+            cursor: pointer;
+            transition: 0.5s;
             text-align: center;
-            max-width: 200px;
+        }
+
+        .member-info {
+            margin-top: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        .member-info h3{
+            margin: 0;
+            font-size: 1rem;    
+            font-weight: 200;   
+            color: #ffffff;
+            min-height: calc(1rem*1.3*2);
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+
+
+        .member-info p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #a0a0a0; 
+            line-height: 1.3;
+            
+            min-height: calc(0.9rem * 1.3 * 2); 
+            
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+
+        /*Founders */
+        .founder {
+            text-align: center;
+            /* max-width: 200px; */
         }
 
         .founder img, .team-member img {
-            width: 150px;
-            height: 150px;
+            width: 110px;
+            height: 110px;
+            margin-bottom: 16px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 15px;
+            /* margin-bottom: 15px; */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
-        .team-member img:hover {
+        /* .team-member img:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
+        } */
 
-        .founder h2, .team-member h3, .team-member h4, .team-member h5, .team-member h6, .team-member h7, .team-member h8, .team-member h9 {
+        .founder h2 {
             font-size: 1rem;
             margin-bottom: 5px;
-            font-weight: bold;
-            color: #152B52;
+            font-weight: 300;
+            margin: 0;
         }
 
         .team-member p {
             font-size: 0.9rem;
-            color: #666;
+            font-weight: 200;
             margin: 0;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #152B52;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: auto;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer img {
-            height: 35px;
-            padding: 0 10px;
         }
 
         /* Media Queries */
         @media (max-width: 768px) {
-            header {
-                height: 60px;
-                padding: 0 10px;
-            }
-
-            header img {
-                height: 40px;
-            }
-
-            .hamburger {
-                display: block;
-            }
-
-            nav ul {
-                position: fixed;
-                top: 60px;
-                right: -100%;
-                flex-direction: column;
-                background: #152B52;
-                width: 100%;
-                height: calc(100vh - 60px);
-                transition: 0.3s;
-                padding: 20px 0;
-            }
-
-            nav ul.show-menu {
-                right: 0;
-            }
-
-            nav ul li {
-                margin: 10px 0;
-                text-align: center;
-            }
-
-            nav ul li a {
-                padding: 15px;
-                font-size: 1.1rem;
-                display: block;
-            }
-
-            .hamburger.active span:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-
-            .hamburger.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -6px);
-            }
 
             .sector-container {
                 flex-direction: column !important;
@@ -393,341 +480,329 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="assets/images/wabs.jpeg" alt="WABS Logo"></a>
+        <a href="index.html" class="logo">
+            <img src="assets/images/wabs-removebg-preview.png" alt="WABS Logo">
+        </a>
+
         <button type="button" class="hamburger" aria-label="Toggle navigation">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <nav>
+
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="report.html">Reports</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="events_info.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero-section">
-            <div class="hero-section-header">
-                <h1>Our Four Sectors Driving The Future of Africa:</h1>
+            <div>
+                <h2 class="medium-text">Our Four Sectors Driving the Future of Africa</h2>
+                <p class="hero-subtitle">Explore our research and insights across Finance, Energy, Technology, and Real Estate.</p>
             </div>
         </section>
 
         <section class="sector">
-            <div class="sector-container">
-                <div class="sector-image">
-                    <img src="assets/images/40.png" alt="Energy Sector">
+            <div class="sector-wrapper">
+                <div class="sector-container">
+                    <div class="sector-content">
+                        <div class="sector-title">
+                            <div class="energy-icon icon"></div>
+                            <h2>Energy</h2>
+                        </div>
+                        <p>Explore Africa's renewable energy potential, sustainable energy solutions, and investments shaping the future of clean energy across the continent.</p>
+                    </div>
                 </div>
-                <div class="sector-content">
-                    <h2>Energy</h2>
-                    <p>Explore Africa's renewable energy potential, sustainable energy solutions, and investments shaping the future of clean energy across the continent.</p>
-                </div>
-            </div>
 
-            <div class="sector-container">
-                <div class="sector-image">
-                    <img src="assets/images/38.png" alt="Finance Sector">
+                <div class="sector-container">
+                    <div class="sector-content">
+                        <div class="sector-title">
+                            <div class="finance-icon icon"></div>
+                            <h2>Finance</h2>
+                        </div>
+                        <p>Discover the evolving financial landscape, innovative fintech solutions, and global partnerships revolutionizing the African finance sector.</p>
+                    </div>
                 </div>
-                <div class="sector-content">
-                    <h2>Finance</h2>
-                    <p>Discover the evolving financial landscape, innovative fintech solutions, and global partnerships revolutionizing the African finance sector.</p>
-                </div>
-            </div>
 
-            <div class="sector-container">
-                <div class="sector-image">
-                    <img src="assets/images/41.png" alt="Technology Sector">
+                <div class="sector-container">
+                    <div class="sector-content">
+                        <div class="sector-title">
+                            <div class="tech-icon icon"></div>
+                            <h2>Technology</h2>
+                        </div>
+                        <p>Learn about groundbreaking advancements in technology, digital transformation, and Africa’s tech hubs driving innovation.</p>
+                    </div>
                 </div>
-                <div class="sector-content">
-                    <h2>Technology</h2>
-                    <p>Learn about groundbreaking advancements in technology, digital transformation, and Africa’s tech hubs driving innovation.</p>
-                </div>
-            </div>
 
-            <div class="sector-container">
-                <div class="sector-image">
-                    <img src="assets/images/39.png" alt="Real Estate Sector">
-                </div>
-                <div class="sector-content">
-                    <h2>Real Estate &amp; Property Development</h2>
-                    <p>Explore Africa’s growing real estate market, urban development projects, and sustainable housing solutions transforming cities.</p>
+                <div class="sector-container">
+                    <div class="sector-content">
+                        <div class="sector-title">
+                            <div class="real-estate-icon icon"></div>
+                            <h2>Real Estate</h2>
+                        </div>
+                        <p>Explore Africa’s growing real estate market, urban development projects, and sustainable housing solutions transforming cities.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <section class="team-section">
-        <h2>Meet Our Team</h2>
+        <h3 class="medium-text">Meet Our Team</h3>
         <div class="buttons">
-            <button type="button" data-team="presidents-co-founders">Presidents/ Co-Founders</button>
-            <button type="button" data-team="advisory-board">Advisory Board</button>
-            <button type="button" data-team="ambassadors">Ambassadors</button>
-            <button type="button" data-team="industry-sector-team">Industry Sector Team</button>
-            <button type="button" data-team="corporate-relations-team">Corporate Relations Team</button>
-            <button type="button" data-team="internal-operations-team">Internal Operations Team</button>
-            <button type="button" data-team="marketing-creative-team">Marketing and Creative Team</button>
-            <button type="button" data-team="research-insights-team">Research &amp; Insights Team</button>
+            <button class="team-role-btn active" type="button" data-team="presidents-co-founders">Presidents</button>
+            <button class="team-role-btn" type="button" data-team="advisory-board">Advisory Board</button>
+            <button class="team-role-btn" type="button" data-team="industry-sector-team">Industry Sector Team</button>
+            <button class="team-role-btn" type="button" data-team="corporate-relations-team">Corporate Relations Team</button>
+            <button class="team-role-btn" type="button" data-team="internal-operations-team">Internal Operations Team</button>
+            <button class="team-role-btn" type="button" data-team="marketing-creative-team">Marketing and Creative Team</button>
+            <button class="team-role-btn" type="button" data-team="research-insights-team">Research &amp; Insights Team</button>
         </div>
 
-        <div class="team-gallery" id="presidents-co-founders">
+        <div class="team-gallery active" id="presidents-co-founders">
             <div class="team-member">
-                <img src="pics/30.png" alt="Emmanuel Ogunsakin">
-                <h5>Emmanuel Ogunsakin</h5>
-                <p>President/ Co-Founder</p>
+                <img src="assets/images/team/charles-edu.jpg" alt="Charles Edu">
+                <div class="member-info">
+                    <h3>Charles Edu</h3>
+                    <p>WABS President</p>
+                </div>
             </div>
             <div class="team-member">
-                <img src="pics/28.png" alt="Temi Balogun">
-                <h5>Temi Balogun</h5>
-                <p>President/ Co-Founder</p>
+                <img src="assets/images/team/edmund-poku2.jpg" alt="Edmund Poku">
+                <div class="member-info">
+                    <h3>Edmund Poku</h3>
+                    <p>WABS President</p>
+                </div>
             </div>
         </div>
 
         <div class="team-gallery" id="industry-sector-team">
             <div class="team-member">
-                <img src="pics/4.png" alt="Jedidiah Oni">
-                <h3>Jedidiah Oni</h3>
-                <p>Head of Technology</p>
+                <img src="assets/images/team/damilare-aluko.jpg" alt="Damilare Aluko">
+                <div class="member-info">
+                    <h3>Damilare Aluko</h3>
+                    <p>Head of Technology</p>
+                </div>
             </div>
             <div class="team-member">
-                <img src="pics/7.png" alt="Antoine Agu">
-                <h3>Antoine Agu</h3>
-                <p>Head of Technology</p>
+                <img src="assets/images/team/innocent-musora.jpg" alt="Innocent Musora">
+                <div class="member-info">
+                    <h3>Innocent Musora</h3>
+                    <p>Head of Technology</p>
+                </div>
             </div>
             <div class="team-member">
-                <img src="pics/2.png" alt="Sem Kohyrelon">
-                <h3>Sem Kohyrelon</h3>
-                <p>Head of Finance</p>
+                <img src="assets/images/team/oreoluwa-olorunfemi.jpg" alt="Oreoluwa Olorunfemi">
+                <div class="member-info">
+                    <h3>Oreoluwa Olorunfemi</h3>
+                    <p>Head of Finance</p>
+                </div>
             </div>
             <div class="team-member">
-                <img src="pics/1.png" alt="Saron Sium">
-                <h3>Saron Sium</h3>
-                <p>Head of Finance</p>
-
+                <img src="assets/images/team/mubarak-tinubu.jpg" alt="Mubarak Tinubu">
+                <div class="member-info">
+                    <h3>Mubarak Tinubu</h3>
+                    <p>Head of Finance</p>
+                </div>
             </div>
             <div class="team-member">
-                <img src="pics/3.png" alt="Kenenna Okoli">
-                <h3>Kenenna Okoli</h3>
-                <p>Head of Energy</p>
+                <img src="assets/images/team/umar-farouk-bashir.jpg" alt="Umar Farouk Bashir">
+                <div class="member-info">
+                    <h3>Umar Farouk Bashir</h3>
+                    <p>Head of Energy</p>
+                </div>
             </div>
             <div class="team-member">
-                <img src="pics/8.png" alt="Edmond Poku">
-                <h3>Edmond Poku</h3>
-                <p>Head of Energy</p>
+                <img src="assets/images/team/dare-awoyinfa.jpg" alt="Dare Awoyinfa">
+                <div class="member-info">
+                    <h3>Dare Awoyinfa</h3>
+                    <p>Head of Energy</p>
+                </div>
             </div>
             <div class="team-member">
-                <img src="pics/5.png" alt="Maxwell Akrasi">
-                <h3>Maxwell Akrasi</h3>
-                <p>Head of RE&amp;PD</p>
+                <img src="assets/images/team/keshav-viswanathan.jpg" alt="Keshav Viswanathan">
+                <div class="member-info">
+                    <h3>Keshav Viswanathan</h3>
+                    <p>Head of RE&amp;PD</p>
+                </div>
             </div>
             <div class="team-member">
-                <img src="pics/6.png" alt="Yassin Aly">
-                <h3>Yassin Aly</h3>
-                <p>Head of RE&amp;PD</p>
+                <img src="assets/images/team/omatta-aidoko-ali.jpg" alt="Omatta Aidoko-Ali">
+                <div class="member-info">
+                    <h3>Omatta Aidoko-Ali</h3>
+                    <p>Head of RE&amp;PD</p>
+                </div>
+            </div>
         </div>
-        </div>
-
 
         <div class="team-gallery" id="advisory-board">
-           <div class="team-member">
-               <img src="pics/28.png" alt="Temi Balogun">
-               <h4>Temi Balogun</h4>
-               <p>Chairman</p>
-           </div>
-           <div class="team-member">
-                <img src="pics/30.png" alt="Emmanuel Ogunsakin">
-                <h4>Emmanuel Ogunsakin</h4>
-                <p>Chairman</p>
+            <div class="team-member">
+                <img src="assets/images/team/eniola-adekunle.jpg" alt="Eniola Adekunle">
+                <div class="member-info">
+                    <h3>Eniola Adekunle</h3>
+                    <p>Director of Operations</p>
+                </div>
             </div>
-           <div class="team-member">
-               <img src="pics/38.png" alt="Adam Mahmoud">
-               <h4>Adam Mahmoud</h4>
-               <p>Director</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/36.png" alt="Chike Odogwu">
-               <h4>Chike Odogwu</h4>
-               <p>Director</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/34.png" alt="Heaven Amanuel">
-               <h4>Heaven Amanuel</h4>
-               <p>Director</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/31.png" alt="Emmanuel Owusu">
-               <h4>Emmanuel Owusu</h4>
-               <p>Director</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/35.png" alt="Damilola Dawodu">
-               <h4>Damilola Dawodu</h4>
-               <p>Internal Consultant</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/33.png" alt="Jae Ladha">
-               <h4>Jae Ladha</h4>
-               <p>Internal Consultant</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/32.png" alt="Leo Kotthoff">
-               <h4>Leo Kotthoff</h4>
-               <p>Internal Consultant</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/37.png" alt="Alec Williams">
-               <h4>Alec Williams</h4>
-               <p>Internal Consultant</p>
-           </div>
-       </div>
-       <div class="team-gallery" id="ambassadors">
-           <div class="team-member">
-               <img src="pics/44.png" alt="Ife Alabi">
-               <h6>Ife alabi</h6>
-               <p>Social Media</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/43.png" alt="Joshua Akinyemi">
-               <h6>Joshua Akinyemi</h6>
-               <p>Social Media</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/39.png" alt="Rayane Agzena">
-               <h6>Rayane Agzenai</h6>
-               <p>External Relations</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/41.png" alt="Cherine Ben Slama">
-               <h6>Cherine Ben Slama</h6>
-               <p>External Relations</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/40.png" alt="Cyrine Mokrani">
-               <h6>Cyrine Mokrani</h6>
-               <p>External Relations</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/42.png" alt="Tinhinan Souak">
-               <h6>Tinhinan Souak</h6>
-               <p>External Relations</p>
-           </div>
-       </div>
-       <div class="team-gallery" id="research-insights-team">
-           <div class="team-member">
-               <img src="pics/21.png" alt="Iliriana Rexhepi">
-               <h3>Iliriana Rexhepi</h3>
-               <p>Head of Market Insights</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/22.png" alt="Ali Benrabah">
-               <h3><br>Ali Benrabah</h3>
-               <p>Head of Research</p>
-           </div>
-       </div>
-       <div class="team-gallery" id="marketing-creative-team">
-           <div class="team-member">
-               <img src="pics/12.png" alt="Mojolaoluwa Ayanbadejo">
-               <h3>Mojolaoluwa Ayanbadejo</h3>
-               <p>Marketing &amp; Communications Exec</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/13.png" alt="Ali Benrabah">
-               <h3>Princess Ayoade</h3>
-               <p>Marketing &amp; Communications Exec</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/10.png" alt="Ahmed Ali">
-               <h3>Ahmed Ali</h3>
-               <p>Head of Marketing and Creative Team</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/11.png" alt="Morayo Aruna">
-               <h3>Morayo Aruna</h3>
-               <p>Creative Design Exec</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/9.png" alt="Vaibav Vobbilisetty">
-               <h3>Vaibav Vobbilisetty</h3>
-               <p>Creative Design Exec</p>
-           </div>
-       </div>
-       <div class="team-gallery" id="internal-operations-team">
-           <div class="team-member">
-               <img src="pics/16.png" alt="Ilyan Benamor">
-               <h3><br>Ilyan Benamor</h3>
-               <p>Events Exec</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/15.png" alt="Jayda Thomas-Arnold">
-               <h3><br>Jayda Thomas-Arnold</h3>
-               <p>Events Exec</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/27.png" alt="Mercy Maku">
-               <h3>Mercy Maku</h3>
-               <p>Secretary</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/14.png" alt="Bami Odunlami">
-               <h3><br>Bami Odunlami</h3>
-               <p>Treasurer</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/23.png" alt="Mal Thiep">
-               <h3><br>Mal Thiep</h3>
-               <p>Diversity &amp; Inclusion Officer</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/26.png" alt="Oluwafemi Okono">
-               <h3>Oluwafemi Okono</h3>
-               <p>IT operative</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/25.png" alt="Oluwatobiloba Adegbite">
-               <h3>Oluwatobiloba Adegbite</h3>
-               <p>IT operative</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/24.png" alt="Alexander Armah">
-               <h3>Alexander Armah</h3>
-               <p>IT operative</p>
-           </div>
-       </div>
-       <div class="team-gallery" id="corporate-relations-team">
-           <div class="team-member">
-               <img src="pics/18.png" alt="Yusra Mohamed Isse">
-               <h3><br>Yusra Mohamed Isse</h3>
-               <p>External Outreach Exec</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/19.png" alt="Olaide Oduntan">
-               <h3>Olaide Oduntan</h3>
-               <p>External Outreach Exec</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/31.png" alt="Emmanuel Owusu">
-               <h3>Emmanuel Owusu</h3>
-               <p>External Outreach Exec</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/29.png" alt="Ashyl Hematlal">
-               <h3><br>Ashyl Hematlal</h3>
-               <p>Sponsorship Officer</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/17.png" alt="Melina Hassan">
-               <h3>Melina Hassan</h3>
-               <p>Careers Officer</p>
-           </div>
-           <div class="team-member">
-               <img src="pics/20.png" alt="Cyran Abdul-Salam">
-               <h3><br>Cyran Abdul-Salam</h3>
-               <p>Legal Officer</p>
-           </div>
-       </div>
+            <div class="team-member">
+                <img src="assets/images/team/shabd-mathur.jpg" alt="Shabd Mathur">
+                <div class="member-info">
+                    <h3>Shabd Mathur</h3>
+                    <p>Board Advisor</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/team/patrick-sodjah.jpg" alt="Patrick Sodjah">
+                <div class="member-info">
+                    <h3>Patrick Sodjah</h3>
+                    <p>Board Advisor</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/team/bolu-bayo-ajayi.jpg" alt="Bolu Bayo Ajayi">
+                <div class="member-info">
+                    <h3>Bolu Bayo Ajayi</h3>
+                    <p>Board Advisor</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/team/zikora-dan-okeke.jpg" alt="Zikora Dan-Okeke">
+                <div class="member-info">
+                    <h3>Zikora Dan-Okeke</h3>
+                    <p>Board Advisor</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/team/musa-bello.jpg" alt="Musa Bello">
+                <div class="member-info">
+                    <h3>Musa Bello</h3>
+                    <p>Board Advisor</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/team/awurabena-koduah-sarpong.jpg" alt="Awurabena Koduah-Sarpong">
+                <div class="member-info">
+                    <h3>Awurabena Koduah-Sarpong</h3>
+                    <p>Board Advisor</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/team/vaibav-vobbilisetty.jpg" alt="Vaibav Vobbilisetty">
+                <div class="member-info">
+                    <h3>Vaibav Vobbilisetty</h3>
+                    <p>Board Advisor</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-gallery" id="research-insights-team">
+            <div class="team-member">
+                <img src="assets/images/team/ethan-muriuki.jpg" alt="Ethan Muriuki">
+                <div class="member-info">
+                    <h3>Ethan Muriuki</h3>
+                    <p>Co Head of Market Research</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/team/harsh-dhedhi.jpg" alt="Harsh Dhedhi">
+                <div class="member-info">
+                    <h3>Harsh Dhedhi</h3>
+                    <p>Co Head of Market Research</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-gallery" id="marketing-creative-team">
+            <div class="team-member">
+                <img src="assets/images/team/antonia-popa.jpg" alt="Antonia Popa">
+                <div class="member-info">
+                    <h3>Antonia Popa</h3>
+                    <p>Head of Marketing</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/team/vanessa-akhibi.jpg" alt="Vanessa Akhibi">
+                <div class="member-info">
+                    <h3>Vanessa Akhibi</h3>
+                    <p>Creative Design Executive</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/team/alanis-nwadire.jpg" alt="Alanis Nwadire">
+                <div class="member-info">
+                    <h3>Alanis Nwadire</h3>
+                    <p>Creative Design Executive</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/team/tsola-omatseye.jpg" alt="Tsola Omatseye">
+                <div class="member-info">
+                    <h3>Tsola Omatseye</h3>
+                    <p>Creative Design Executive</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-gallery" id="internal-operations-team">
+            <div class="team-member">
+                <img src="assets/images/team/adesope-adetogun.jpg" alt="Adesope Adetogun">
+                <div class="member-info">
+                    <h3>Adesope Adetogun</h3>
+                    <p>IT Systems Operative</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/team/priscilla-fatokun.jpg" alt="Priscilla Fatokun">
+                <div class="member-info">
+                    <h3>Priscilla Fatokun</h3>
+                    <p>Secretary</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/team/demi-ajibade.jpg" alt="Demi Ajibade">
+                <div class="member-info">
+                    <h3>Demi Ajibade</h3>
+                    <p>Treasurer</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/team/rose-nchidwuor.jpg" alt="Rose Nchidwuor">
+                <div class="member-info">
+                    <h3>Rose Nchidwuor</h3>
+                    <p>Events Executive</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-gallery" id="corporate-relations-team">
+            <div class="team-member">
+                <img src="assets/images/team/bertha-sibanda.jpg" alt="Bertha Sibanda">
+                <div class="member-info">
+                    <h3>Bertha Sibanda</h3>
+                    <p>External Outreach Executive</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/team/gessica-arthur.jpg" alt="Gessica Arthur">
+                <div class="member-info">
+                    <h3>Gessica Arthur</h3>
+                    <p>External Outreach Executive</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="assets/images/team/rosie-lunda.jpg" alt="Roise Lunda">
+                <div class="member-info">
+                    <h3>Rosie Lunda</h3>
+                    <p>External Outreach Executive</p>
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
         <a href="https://www.instagram.com/warwickafricanbusinesssoc/"><img src="assets/images/ig_logo.png" alt="Instagram Logo"></a>

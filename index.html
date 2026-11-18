@@ -20,50 +20,12 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            /* font-family: Arial, sans-serif; */
+            /* background-color: #f4f4f4; */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-        }
-
-        header {
-            background-color: #152B52;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 15px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-
-        header img {
-            height: 50px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 10px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: 500;
-            padding: 8px 12px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            transition: background-color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #29648A;
+            letter-spacing: 0.5px;
         }
 
         .hamburger {
@@ -85,23 +47,22 @@
             transition: 0.3s;
         }
 
+
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("assets/images/hero.png") center/cover;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)),  url("assets/images/nairobi.png") center/cover;
+            height: 100%;
             color: #ffffff;
-            margin-top: 60px;
-            padding: 20px;
-            font-family: 'TheSeasons', Arial, sans-serif;
+            padding: 5rem;
+            /* font-family: 'TheSeasons', Arial, sans-serif; */
             position: relative;
-            text-align: center;
+            /* text-align: center; */
+            min-height: 442px;
         }
 
         .logo-container {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
             width: 100%;
         }
@@ -114,11 +75,6 @@
             white-space: nowrap;
         }
 
-        .large-text {
-            font-size: 4rem;
-            font-family: 'TheSeasons', Arial, sans-serif;
-            font-weight: 700;
-        }
 
         .divider {
             width: 2px;
@@ -126,20 +82,7 @@
             height: 70px;
         }
 
-        .small-text {
-            font-size: 1.5rem;
-            line-height: 1.2;
-            white-space: nowrap;
-        }
 
-        .hero-subtitle {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.8rem;
-            color: #ffffff;
-            margin-top: 30px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-            max-width: 800px;
-        }
 
         @media (max-width: 768px) {
             .logo-text {
@@ -157,14 +100,13 @@
             }
 
             .small-text {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
             }
 
             .hero-subtitle {
                 font-size: 1.1rem;
                 margin-top: 25px;
-                padding: 0 15px;
-                font-family: 'Montserrat', sans-serif;
+                /* font-family: 'Montserrat', sans-serif; */
 
             }
         }
@@ -179,7 +121,7 @@
             }
 
             .small-text {
-                font-size: 0.8rem;
+                font-size: 0.7rem;
             }
 
             .divider {
@@ -187,7 +129,6 @@
             }
         }
 
-        /* Keep all other existing styles below */
         .hero-section2 {
             min-height: 70vh;
             padding: 40px 20px;
@@ -215,7 +156,7 @@
         .hero-section-header p {
             font-size: 1rem;
             margin-bottom: 30px;
-            font-family: 'Montserrat', sans-serif;
+            /* font-family: 'Montserrat', sans-serif; */
             font-weight: 300;
         }
 
@@ -230,7 +171,7 @@
             background-color: #1A3757;
             color: #FFFFFF;
             padding: 15px;
-            font-family: 'Montserrat', sans-serif;
+            /* font-family: 'Montserrat', sans-serif; */
             font-weight: 700;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -241,23 +182,15 @@
             color: #fff;
             text-align: center;
             padding: 30px 20px;
-            font-family: 'Montserrat', sans-serif;
+            /* font-family: 'Montserrat', sans-serif; */
             font-weight: 700;
             font-size: 2rem;
             margin: 0;
         }
 
-        .founders-section {
-            background-color: #ffffff;
-        }
-
         .section {
             padding: 0 !important;
-            background-color: transparent !important;
-        }
-
-        .section:nth-child(odd) {
-            background-color: #f8f8f8;
+            background-color: transparent !important;;
         }
 
         .founder-img {
@@ -265,32 +198,29 @@
             height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 20px;
+            /* object-position: center 20%; */
+            margin-top: 12px;
         }
 
         blockquote {
-            font-size: 1rem;
-            line-height: 1.5;
-            margin-bottom: 15px;
+            font-size: 0.8rem;
+            line-height: 1.7;
             font-style: italic;
-            color: #333;
+            margin-top: 12px;
+            font-weight: 200;
         }
 
-        .content {
+        /* .content {
             max-width: 600px;
             text-align: center;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
             min-height: 200px;
-        }
+        } */
 
-        .author {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            color: #152B52;
-            margin-top: auto;
-            padding-top: 15px;
+        .author .name{
+            font-weight: 400;
         }
 
         @media (max-width: 768px) {
@@ -306,14 +236,13 @@
             }
         }
 
-        .role {
+        .role p{
             font-size: 0.9rem;
-            color: #666;
-            font-weight: 400;
+            /* color: #666; */
+            font-weight: 300;
         }
 
         footer {
-            background-color: #152B52;
             color: #fff;
             text-align: center;
             padding: 30px 20px;
@@ -332,7 +261,7 @@
 
         footer p {
             margin: 10px 0;
-            font-family: 'Montserrat', sans-serif;
+            /* font-family: 'Montserrat', sans-serif; */
             font-weight: 300;
         }
 
@@ -341,7 +270,7 @@
                 display: block;
             }
 
-            nav ul {
+            /* nav ul {
                 position: fixed;
                 top: 60px;
                 right: -100%;
@@ -351,7 +280,7 @@
                 height: calc(100vh - 60px);
                 transition: 0.3s;
                 padding: 20px 0;
-            }
+            } */
 
             nav ul.show-menu {
                 right: 0;
@@ -444,18 +373,186 @@
         .founders-container {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             gap: 40px;
             width: 100%;
             padding: 30px 15px;
         }
 
-        .founder-item {
+        /* .founder-item {
             display: flex;
             flex-direction: column;
             align-items: center;
-            max-width: 500px;
-            margin: 0 auto;
+            gap: 2px;
+        } */
+
+        .founders-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            /* margin-top: 40px; */
+            padding: 0 20px;
         }
+
+        @media(max-width: 769px){
+            .founders-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+
+
+        .founder-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            padding: 16px 16px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+            cursor: pointer;
+            transition: 0.5s;
+            text-align: center;
+        }
+
+        @media(max-width: 769px){
+            .founder-card{
+                width: 100%;
+            }
+        }
+
+        .content-btn-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 30px;
+        }
+
+        @media(max-width: 763px){
+            .content-btn-container{
+                padding: 12px;
+            }
+        }
+
+        @media(max-width: 511px){
+            .content-btn-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                margin-top: 30px;
+            }
+        }
+
+        .content-btn {
+            background: #d0cdcd;
+            opacity: 1;
+            /* border: 1px solid #e0e0e0; */
+            border: none;
+            border-radius: 50px;
+            padding: 12px 24px;
+            color: #100f0f;
+            cursor: pointer;
+            min-width: 54px;
+            text-align: center;
+            font: inherit;
+
+            transition: all 0.3s ease;
+        }
+
+        /* @media(max-width: 600px){
+            .content-btn{
+                font-size: 0.8rem;
+            }
+        } */
+
+
+        .content-btn:hover {
+            background: #0c111d;
+            color: #f5f5f5;
+        }
+
+        .content-btn.active {
+            background: var(--wabs-blue-dark);
+            color: #f5f5f5;
+            /* border-color: #0f172a; */
+        }
+
+        .content-wrapper{
+            width: 100%;
+            padding: 12px 24px;
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 20px;
+            min-height: 200px;
+        }
+
+
+        .content {
+            /* display: none; */
+            max-height: 0;
+            grid-area: 1 / 1 / 2 / 2; 
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+            max-width: 100%;
+            /* border: 1px solid black; */
+            text-align: left;
+            padding: 40px 20px;
+            color: #ded9d9;
+            /* align-self: start;  */
+        }
+
+        .content-columns {
+            display: flex;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        @media(max-width: 510px){
+            .content-columns{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+
+        .content-col{
+            flex: 1;
+            text-align: left;
+        }
+
+        .content-title{
+            font-size: 1.75rem;
+            letter-spacing: -0.5px;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .content p{
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin-top: 8px;
+            font-weight: 200;
+        }
+
+        .content.active{
+            /* display: block; */
+            opacity: 1;
+            visibility: visible;
+            padding-bottom: 60px;
+            min-height: 350px;
+            max-height: 2000px;
+            /* position: relative; */
+        }
+
+
 
         @media (min-width: 768px) {
             .founders-container {
@@ -475,88 +572,122 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="assets/images/wabs.jpeg" alt="WABS Logo"></a>
+        <a href="index.html" class="logo">
+            <img src="assets/images/wabs-removebg-preview.png" alt="WABS Logo">
+        </a>
+
         <button type="button" class="hamburger" aria-label="Toggle navigation">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <nav>
+
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="report.html">Reports</a></li>
-                <li><a href="events.html">Events</a></li>
+                <li><a href="events_info.html">Events</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero-section">
-        <div class="logo-container">
-            <div class="logo-text">
-                <span class="large-text">WABS</span>
-                <div class="divider"></div>
-                <span class="small-text">
-                    Warwick<br>
-                    African<br>
-                    Business<br>
-                    Society
-                </span>
+        <div class="flex-row-centered" style="height: 70%;">
+            <div class="logo-container">
+                <div class="logo-text">
+                    <span class="medium-text">WABS</span>
+                    <div class="divider"></div>
+                    <span class="small-text">
+                        Warwick<br>
+                        African<br>
+                        Business<br>
+                        Society
+                    </span>
+                </div>
+                <div>
+                    <p class="hero-subtitle">The #1 Fastest Growing Business Society at Warwick</p>
+                </div>
             </div>
-            <div class="hero-subtitle">
-               #1 Fastest Growing Society On University of Warwick Campus
+            <div>
+                <div>
+                    <span class="medium-text">Our Mission</span>
+                </div>
+                <p class="hero-subtitle">To empower ambitious minds with the tools, network and practical insights to navigate the potential of Africa&#8217;s future business landscape</p>
             </div>
         </div>
     </section>
 
-    <section class="hero-section2">
-        <div class="hero-section-header">
-            <h1>Mission Statement</h1>
-            <p>Empowering ambitious minds with the tools, network and practical insights to navigate the potential of Africa's future business landscape</p>
-            <div class="features">
-                <div class="feature-box">Exclusive Insights</div>
-                <div class="feature-box">Unparalleled Networking</div>
-                <div class="feature-box">Practical Knowledge</div>
-            </div>
+    <section>
+        <div class="content-btn-container">
+            <button class="content-btn active" type="button" data-target="about">What is WABS about?</button>
+            <button class="content-btn" type="button" data-target="what-to-expect">What to expect from WABS</button>
+            <button class="content-btn" type="button" data-target="founders">Meet our founders</button>
         </div>
-    </section>
 
-    <section class="leader">
-        <h1>Meet our Founders</h1>
-    </section>
-
-    <section class="founders-section">
-        <div class="founders-container">
-            <div class="founder-item">
-                <div class="image-container">
-                    <img class="founder-img" src="pics/30.png" alt="Emmanuel Ogunsakin">
-                </div>
-                <div class="content">
-                    <blockquote>
-                        “I envision this society leaving a lasting legacy at Warwick by uniting and empowering students from the African diaspora and diverse backgrounds to create the next generation of business leaders in Africa.”
-                    </blockquote>
-                    <div class="author">
-                        EMMANUEL OGUNSAKIN
-                        <div class="role">President/Co-Founder</div>
+        <div class="content-wrapper">
+            <div class="content active" id="about">
+                <h3 class="content-title">What is the Warwick African Business Society about?</h3>
+                <div class="content-columns">
+                    <div class="content-col">
+                        <p>The Warwick African Business Society (WABS) is the #1 fastest-growing business society on campus, dedicated to bridging the gap between students and the vast potential of the African business landscape.</p>
+                    </div>
+                    <div class="content-col">
+                        <p>We are a community of ambitious minds passionate about the continent's economic future, creating a space where cultural heritage meets corporate excellence. Whether you are African, of African descent, or simply fascinated by the continent's booming markets, WABS provides the platform to explore, connect, and lead.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="founder-item">
-                <div class="image-container">
-                    <img class="founder-img" src="pics/28.png" alt="Temi Balogun">
-                </div>
-                <div class="content">
-                    <blockquote>
-                        “Establish WABS as the definitive Warwick platform recognised for connecting young ambitious minds with industry leaders; fostering collaboration and partnerships at the forefront of a transformative generation of innovation, corporate, and investment opportunity shaping Africa’s future business landscape.”
-                    </blockquote>
-                    <div class="author">
-                        TEMI BALOGUN
-                        <div class="role">President/Co-Founder</div>
+            <div class="content" id="what-to-expect">
+                <h3 class="content-title">What to expect from the Warwick African Business Society?</h3>
+                <div class="content-columns">
+                    <div class="content-col">
+                        <p>Membership with WABS is designed to accelerate your professional and personal growth through a dynamic, three-pillar experience.</p>
+                        <p>Through our tailored events, reports, and community, you will gain the tools and connections necessary to navigate and thrive in a global business environment.</p>
+                    </div>
+                    <div class="content-col">
+                        <p>We provide <strong>Exclusive Insights</strong> into emerging African markets, host <strong>Unparalleled Networking</strong> events with industry leaders, and deliver <strong>Practical Knowledge</strong> that bridges the gap between university theory and real-world business success.</p>
                     </div>
                 </div>
             </div>
+
+            <div class="content" id="founders">
+                <h3 class="content-title">Meet the founders of the Warwick African Business Society</h3>
+                
+                <div class="founders-container">
+                    <div class="founder-card">
+                        <div class="author">
+                            <p class="name">EMMANUEL OGUNSAKIN</p>
+                            <div class="role"><p>President/Co-Founder</p></div>
+                        </div>
+                        <div class="image-container">
+                            <img class="founder-img" src="pics/30.png" alt="Emmanuel Ogunsakin">
+                        </div>
+                        <div>
+                            <blockquote>
+                                “I envision this society leaving a lasting legacy at Warwick by uniting and empowering students from the African diaspora and diverse backgrounds to create the next generation of business leaders in Africa.”
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="founder-card">
+                        <div class="author">
+                            <p class="name">TEMI BALOGUN</p>
+                            <div class="role"><p>President/Co-Founder</p></div>
+                        </div>
+                        <div class="image-container">
+                            <img class="founder-img" src="pics/28.png" alt="Temi Balogun">
+                        </div>
+                        <div>
+                            <blockquote>
+                                “I aim to establish WABS as the definitive Warwick platform recognised for connecting young ambitious minds with industry leaders; fostering collaboration and partnerships at the forefront of a transformative generation of innovation, corporate, and investment opportunity shaping Africa’s future business landscape.”
+                            </blockquote>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </section>
 
