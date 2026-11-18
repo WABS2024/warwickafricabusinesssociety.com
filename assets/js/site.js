@@ -33,6 +33,30 @@
         });
     }
 
+    const homeMenuBtns = document.querySelectorAll('.content-btn-container button');
+    const homeMenuContent = document.querySelectorAll('.content-wrapper .content');
+
+    homeMenuBtns.forEach(button => {
+        button.addEventListener('click', () => {
+            homeMenuBtns.forEach(btn => {btn.classList.remove('active')});
+            homeMenuContent.forEach(content => {content.classList.remove('active')});
+
+            button.classList.add('active');
+            const contentToShow = button.dataset.target;
+
+            document.getElementById(contentToShow).classList.add('active');
+        })
+    })
+
+
+    const teamRoleBtns = document.querySelectorAll('.team-role-btn');
+    teamRoleBtns.forEach(button => {
+        button.addEventListener('click', () => {
+            teamRoleBtns.forEach(btn => {btn.classList.remove('active')});
+            button.classList.add('active');
+        });
+    });
+
 /*     Made a change here
     Moved report filtering to another File
     But this still works for all elements with 'data-team' attribute */

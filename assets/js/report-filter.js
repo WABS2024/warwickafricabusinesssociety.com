@@ -2,10 +2,10 @@ let reportsCache = null;
 
 
 const images = {
-    "Energy": "assets/images/energy_sec.png",
-    "Finance": "assets/images/finance_sec.png",
-    "Technology": "assets/images/tech_sec.png",
-    "Real Estate": "assets/images/resec.png"
+    "Energy": "assets/images/report-cover/energy.jpg",
+    "Finance": "assets/images/report-cover/finance2.jpg",
+    "Technology": "assets/images/report-cover/tech.jpg",
+    "Real Estate": "assets/images/report-cover/real-estate2.jpg"
 }
 
 
@@ -91,15 +91,22 @@ const filterReports = async (category) => {
 }
 
 
-//Event delegation from parent, rather than creating an event listener for each button.
-document.querySelector('.report-tabs').addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-report]'); //closest() can track what was actually clicked within the element.
-    if(!btn) return;
-    filterReports(btn.dataset.report);
-});
-
 
 document.addEventListener('DOMContentLoaded', () => {
-    const initial = document.querySelector('.report-tabs [aria-selected="true"]');
+
+    //Event delegation from parent, rather than creating an event listener for each button.
+    document.querySelector('.report-tabs').addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-report]'); //closest() can track what was actually clicked within the element.
+        if(!btn) return;
+
+        document.querySelectorAll('.report-tab').forEach(tab => tab.classList.remove('active'));
+
+        btn.classList.add('active');
+        filterReports(btn.dataset.report);
+    });
+    
+    const initial = document.querySelector('.report-tabs .active');
     if(initial) filterReports(initial.dataset.report);
+
+
 });
