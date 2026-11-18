@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Energy Sector Report",
+    "issue": "1",
+    "date": "December 2024",
+    "file": "./assets/reports/Energy Sector Report - Issue 1 - December 2024.pdf",
+    "category": "Energy"
+  },
+  {
+    "title": "Energy Sector Report",
+    "issue": "2",
+    "date": "January 2025",
+    "file": "./assets/reports/Energy Sector Report - Issue 2 - January 2025.pdf",
+    "category": "Energy"
+  },
+  {
+    "title": "Energy Sector Report",
+    "issue": "3",
+    "date": "May 2025",
+    "file": "./assets/reports/Energy Sector Report - Issue 3 - May 2025.pdf",
+    "category": "Energy"
+  },
+  {
+    "title": "Finance Sector Report",
+    "issue": "1",
+    "date": "December 2024",
+    "file": "./assets/reports/Finance Sector Report - Issue 1 - December 2024.pdf",
+    "category": "Finance"
+  },
+  {
+    "title": "Finance Sector Report",
+    "issue": "2",
+    "date": "January 2025",
+    "file": "./assets/reports/Finance Sector Report - Issue 2 - January 2025.pdf",
+    "category": "Finance"
+  },
+  {
+    "title": "Finance Sector Report",
+    "issue": "3",
+    "date": "February 2025",
+    "file": "./assets/reports/Finance Sector Report - Issue 3 - February 2025.pdf",
+    "category": "Finance"
+  },
+  {
+    "title": "Real Estate Sector Report",
+    "issue": "1",
+    "date": "January 2025",
+    "file": "./assets/reports/Real Estate Sector Report - Issue 1 - January 2025.pdf",
+    "category": "Real Estate"
+  },
+  {
+    "title": "Real Estate Sector Report",
+    "issue": "2",
+    "date": "February 2025",
+    "file": "./assets/reports/Real Estate Sector Report - Issue 2 - February 2025.pdf",
+    "category": "Real Estate"
+  },
+  {
+    "title": "Real Estate Sector Report",
+    "issue": "3",
+    "date": "March 2025",
+    "file": "./assets/reports/Real Estate Sector Report - Issue 3 - March 2025.pdf",
+    "category": "Real Estate"
+  },
+  {
+    "title": "Technology Sector Report",
+    "issue": "1",
+    "date": "December 2024",
+    "file": "./assets/reports/Technology Sector Report - Issue 1 - December 2024.pdf",
+    "category": "Technology"
+  },
+  {
+    "title": "Technology Sector Report",
+    "issue": "2",
+    "date": "January 2025",
+    "file": "./assets/reports/Technology Sector Report - Issue 2 - January 2025.pdf",
+    "category": "Technology"
+  },
+  {
+    "title": "Technology Sector Report",
+    "issue": "3",
+    "date": "February 2025",
+    "file": "./assets/reports/Technology Sector Report - Issue 3 - February 2025.pdf",
+    "category": "Technology"
+  }
+]
